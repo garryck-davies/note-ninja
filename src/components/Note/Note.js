@@ -32,24 +32,22 @@ export default class Note extends React.Component {
     render() {
     return (
       <div className="notecontainer-note" key={this.props.note.id}>
-       {this.state.editing
+      { this.state.editing
         ? <input 
-            value={this.state.titleInput} 
-            onChange={this.handleTitleInput}/>
+          value={this.state.titleInput} 
+          onChange={this.handleTitleInput}/>
         : <h4>{this.props.note.title}</h4>
         }
 
-        {this.state.editing
-        ? <input 
+        { this.state.editing && <h2>Hello World</h2> }
+        
+
+        <input 
             value={this.state.noteInput} 
             onChange={this.handleNoteInput}/>
-        : <p>{this.props.note.note}</p>
-        }
-        {
-            this.state.editing
-            ? <button onClick={this.submitEdit}>Submit</button>
-            : <button onClick={this.toggleEditing}>Edit</button>
-        }
+        <p>{this.props.note.note}</p>
+        <button onClick={this.submitEdit}>Submit</button>
+        <button onClick={this.toggleEditing}>Edit</button>
         <p className="notecontainer-date">{this.props.note.date}</p>
       </div>
     );
