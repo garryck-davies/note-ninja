@@ -7,6 +7,5 @@ app.use(express.json());
 
 app.get('/api/note', ctrl.getNotes);
 app.post('/api/note/', ctrl.addNote);
-app.delete('/api/note/:id', ctrl.deleteNote);
 
 app.listen(port, () => console.log(`Hard to port ${port}`))

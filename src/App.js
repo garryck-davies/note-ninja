@@ -23,9 +23,10 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <AddNote noteAdder={this.addNote} />
+          <h1>Note Ninja</h1>
         </header>
-        <NoteContainer notesPizza={ this.state.notes } />
+        <AddNote noteAdder={this.addNote} />
+        <NoteContainer notes={ this.state.notes } />
         
       </div>
     );

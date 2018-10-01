@@ -19,9 +19,4 @@ module.exports = {
     res.status(201).send(notes);
   },
 
-  deleteNote: (req, res) => {
-      let { id } = req.params;
-      notes = notes.filter( note => note.id !== +id);
-      res.send(notes);
-  }
 };
